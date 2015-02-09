@@ -14,7 +14,8 @@ public class Student {
      */
 
     public Student(String name, int perm) {
-	// this.name = name; this.perm = perm;
+	this.setName(name); 
+	this.setPerm(perm);
     }
 
     /**
@@ -23,12 +24,11 @@ public class Student {
      */
 
     public void setPerm(int perm) {
-	/*if (perm < MIN_PERM || perm > MAX_PERM) {
+	if (perm < MIN_PERM || perm > MAX_PERM) {
 	    throw 
 		new IllegalArgumentException("Perm number out of range.");
 	}
-	*/
-	
+	this.perm = perm;
     }
 
     /**
@@ -37,19 +37,27 @@ public class Student {
      */
 
     public void setName(String name) {
-	// STUB!!  TODO: FIXME
+	this.name = name;
     }
 
 
     /**
        perm number of student, e.g. 1234567
      */
-    public int getPerm() { return -42; }
+    public int getPerm() { return this.perm; }
 
     /**
        Student name, e.g. "Fred Gaucho"
      */
-    public String getName() { return "STUB! You sucka!"; }
+    public String getName() { return this.name; }
 
+
+    /**
+       Convert to String in format [1234567,"Fred Gaucho"]
+     */
+
+    public String toString() {
+	return "STUB!";
+    }
     
 }
