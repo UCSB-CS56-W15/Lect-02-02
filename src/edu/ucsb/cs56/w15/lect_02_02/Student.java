@@ -57,7 +57,7 @@ public class Student {
      */
 
     public String toString() {
-	return "STUB!";
+	return "[" + this.perm + ",\"" + this.name + "\"]" ;
     }
     
 }
